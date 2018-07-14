@@ -28,6 +28,9 @@
 
       &.pull-left {
         padding: 0 20px;
+        .kalarrs {
+          font-size: 1em;
+        }
       }
     }
   }
@@ -37,11 +40,40 @@
   }
 
   .kalarrs {
-    //font-size: 1.1em;
+    font-size: 1.1em;
     text-transform: lowercase;
     &:before {
       color: #bada55;
       content: '@'
+    }
+  }
+
+  table {
+    &.t-0 {
+      tr {
+        background: #42affa;
+      }
+    }
+
+    &.t-1 {
+      tr:nth-child(1), tr:nth-child(2), tr:nth-child(3), tr:nth-child(4), tr:nth-child(6) {
+        background: #42affa;
+      }
+    }
+    &.t-2 {
+      tr:nth-child(1), tr:nth-child(2) {
+        background: #42affa;
+      }
+    }
+    &.t-3 {
+      tr:nth-child(1), tr:nth-child(2), tr:nth-child(3), tr:nth-child(4), tr:nth-child(6) {
+        background: #42affa;
+      }
+    }
+    &.t-4 {
+      tr:nth-child(1) {
+        background: #42affa;
+      }
     }
   }
 

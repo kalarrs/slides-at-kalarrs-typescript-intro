@@ -24,7 +24,7 @@
 <body>
 <div class="reveal">
     <div class="slides">
-        <!--
+
         <section>
             <h1><span class="kalarrs">kalarrs</span></h1>
             <h3>The Complete Serverless Framework</h3>
@@ -111,7 +111,7 @@
                     </div>
                     </div>
                     <div class="outline" style="background: #42affa; padding-bottom: 20px;">
-                        <h4 style="font-size: .9em;">Your Code</h4>
+                        <h4 style="font-size: .9em;">Application Code</h4>
                     </div>
                 </div>
             </div>
@@ -150,34 +150,41 @@
                 <li class="fragment">Provider agnostic (Coming Soon)</li>
             </ul>
         </section>
-        -->
+
         <section>
-            <!--https://medium.com/@nnilesh7756/what-are-cloud-computing-services-iaas-caas-paas-faas-saas-ac0f6022d36e-->
             <h2>5 main types of <br>cloud computing services</h2>
-            <ol>
-                <li class="fragment">Infrastructure as a Service (IaaS)</li>
-                <li class="fragment">Platform as a Service (PaaS)</li>
-                <li class="fragment">Container as a Service (CaaS)</li>
-                <li class="fragment">Function as a Service (FaaS)</li>
-                <li class="fragment">Software as a Service (SaaS)</li>
-            </ol>
-            <!--
-             <p>
-                Stack
-                Software
-                Applications
-                Runtimes
-                Security & Integration
-
-                Databases
-                Servers
-                Virtualization
-                Server HW
-                Storage
-                Networking
-
-            </p>
-            -->
+            <div class="clearfix">
+                <div class="pull-left">
+                    <div>
+                        <ol>
+                            <li id="t-1" class="fragment">Infrastructure as a Service (IaaS)</li>
+                            <li id="t-2" class="fragment">Platform as a Service (PaaS)</li>
+                            <li id="t-3" class="fragment">Container as a Service (CaaS)</li>
+                            <li id="t-4" class="fragment sls">Function as a Service (FaaS)</li>
+                            <li id="t-5" class="fragment">Software as a Service (SaaS)</li>
+                        </ol>
+                    </div>
+                    <img src="https://cdn-images-1.medium.com/max/1600/1*DYoadhgfpZCMRCMKNUpQ6A.png" width="680"
+                         style="border: 0;"
+                         alt="">
+                </div>
+                <div>
+                    <table id="t" style="font-size: .5em; border: solid 1px white;" class="t-0">
+                        <tr><td>Application Code</td></tr>
+                        <tr><td>Applications</td></tr>
+                        <tr><td>Runtimes</td></tr>
+                        <tr><td>Security & Integration</td></tr>
+                        <tr><td></td></tr>
+                        <tr><td>Databases</td></tr>
+                        <tr><td>Servers</td></tr>
+                        <tr><td>Virtualization</td></tr>
+                        <tr><td>Server Hardware</td></tr>
+                        <tr><td>Storage</td></tr>
+                        <tr><td>Networking</td></tr>
+                    </table>
+                </div>
+            </div>
+            <aside><a href="https://medium.com/@nnilesh7756/what-are-cloud-computing-services-iaas-caas-paas-faas-saas-ac0f6022d36e">Median Article</a></aside>
         </section>
 
         <section>
@@ -196,6 +203,20 @@
     // More info about config & dependencies:
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
+    let tExp = /^t-([0-9]+)$/i;
+
+    Reveal.addEventListener('fragmentshown', function (event) {
+        if(tExp.test(event.fragment.id)) {
+            document.getElementById('t').className = event.fragment.id;
+        }
+    });
+    Reveal.addEventListener('fragmenthidden', function (event) {
+        if(tExp.test(event.fragment.id)) {
+            let num = parseInt(event.fragment.id.replace(tExp,'$1'));
+            document.getElementById('t').className = 't-' + (num -1);
+        }
+    });
+
     Reveal.initialize({
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
@@ -208,6 +229,8 @@
             }
         ]
     });
+
+
 </script>
 </body>
 </html>
