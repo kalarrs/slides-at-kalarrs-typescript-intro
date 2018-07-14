@@ -1,0 +1,31 @@
+.reveal .clearfix {
+  overflow: hidden;
+  clear: both; }
+
+.reveal .sls {
+  background: #FD5750; }
+  .reveal .sls a {
+    color: #fff !important; }
+
+.reveal .boxes {
+  float: left;
+  width: 50%; }
+  .reveal .boxes:first-child {
+    margin-right: 20px;
+    width: calc(50% - 20px); }
+  .reveal .boxes .outline {
+    padding-top: 15px;
+    border: .03em solid white; }
+    .reveal .boxes .outline h4 {
+      margin-bottom: 0; }
+    .reveal .boxes .outline.pull-left {
+      padding: 0 20px; }
+
+.reveal .pull-left {
+  float: left; }
+
+.reveal .kalarrs {
+  text-transform: lowercase; }
+  .reveal .kalarrs:before {
+    color: #bada55;
+    content: '@'; }

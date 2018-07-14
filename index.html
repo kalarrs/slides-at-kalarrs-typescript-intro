@@ -4,14 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>reveal.js</title>
+    <title>@kalarrs Typescript Intro</title>
 
+    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
-
     <!-- Printing and PDF exports -->
     <script>
         var link = document.createElement('link');
@@ -20,27 +20,23 @@
         link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
         document.getElementsByTagName('head')[0].appendChild(link);
     </script>
-
-    <style>
-        .clearfix {
-
-            clear: both;
-        }
-    </style>
 </head>
 <body>
 <div class="reveal">
     <div class="slides">
-
+        <!--
         <section>
-            <h1 style="text-transform: lowercase;"><span style="color: #bada55;">@</span>kalarrs</h1>
-            <h3>The Complete Serverless Famework</h3>
+            <h1><span class="kalarrs">kalarrs</span></h1>
+            <h3>The Complete Serverless Framework</h3>
             <p>
-                <small>Created by <a>Kalarrs Topham</a> and <a href="">contributors</a></small>
+                <small>Created by <a href="https://github.com/exocom" target="_blank">Kalarrs Topham</a> and <a>contributors</a></small>
             </p>
+            <aside class="notes">
+                Should I add each language box here?
+            </aside>
         </section>
-
         <section>
+            <h2>About Me</h2>
             <div class="clearfix">
                 <div style="float: left">
                     <img width="275" alt="Kalarrs Topham"
@@ -60,15 +56,15 @@
                             </tr>
                             <tr>
                                 <td>2009</td>
-                                <td>PHP / Javascript (jQuery)</td>
+                                <td>PHP / Javascript (jQuery)<br>MySQL</td>
                             </tr>
                             <tr>
                                 <td>2013</td>
-                                <td>JavaScript (AngularJS/Ionic/NodeJS)</td>
+                                <td>JavaScript (AngularJS/Ionic/NodeJS)<br>MongoDB</td>
                             </tr>
                             <tr>
                                 <td>2016</td>
-                                <td>Typescript (Angular/Tabris.js) / C# (dotnet) <br> JavaScript (React/Vue.js)</td>
+                                <td>Typescript (Angular/Tabris.js) / C# (dotnet) <br> JavaScript (React/Vue.js) / PostgreSQL</td>
                             </tr>
                             <tr>
                                 <td>2017</td>
@@ -76,15 +72,57 @@
                             </tr>
                             <tr>
                                 <td>2018</td>
-                                <td>Python / Java / GoLang (Soon...)</td>
+                                <td>Python / Kotlin (Java 8) / GoLang (Soon...)</td>
                             </tr>
                         </table>
                     </small>
                 </div>
             </div>
+            <aside class="notes">
+                Mention I am the creator of @kalarrs then talk shortly about programming background.
+                Touch on my drive to use the correct solution for the problem.
+            </aside>
         </section>
         <section>
-            <h2>Main Focus of <span style="text-transform: lowercase;"><span style="color: #bada55;">@</span>kalarrs</span></h2>
+            <h2>What is <span class="kalarrs">kalarrs</span></h2>
+            <p>Set of tooling built on top of Serverless Framework, mainly as plugins. As well as a collection of
+                libraries to normalize development between languages.</p>
+
+            <div class="clearfix">
+                <div class="boxes fragment">
+                    <div class="outline">
+                        <h4><span class="kalarrs">kalarrs</span></h4>
+                        <small><a href="https://kalarrs.com">https://kalarrs.com</a></small>
+                    </div>
+                    <div class="sls outline">
+                        <h4 style="font-size: .9em;">Serverless Framework</h4>
+                        <small><a href="https://serverless.com/framework/">https://serverless.com/framework/</a></small>
+                    </div>
+                </div>
+                <div class="boxes fragment">
+                    <div class="outline">
+                        <p><small>Node Modules (Dependencies)</small></p>
+                    <div class="clearfix">
+                        <div class="pull-left outline"><h4><span class="kalarrs"></span></h4></div>
+                        <div class="pull-left outline"><h4><span class="kalarrs"></span></h4></div>
+                        <div class="pull-left outline"><h4><span class="kalarrs"></span></h4></div>
+                        <div class="pull-left outline"><h4>Dep</h4></div>
+                        <div class="pull-left outline"><h4>Dep</h4></div>
+                    </div>
+                    </div>
+                    <div class="outline" style="background: #42affa; padding-bottom: 20px;">
+                        <h4 style="font-size: .9em;">Your Code</h4>
+                    </div>
+                </div>
+            </div>
+            <aside class="notes">
+                Push next to reveal image.
+                Explain this is done mostly via plugins.
+            </aside>
+        </section>
+        <section>
+            <h2>Main Focus of <span style="text-transform: lowercase;"><span
+                    style="color: #bada55;">@</span>kalarrs</span></h2>
             <hr>
             <ul>
                 <li class="fragment">Api</li>
@@ -95,7 +133,8 @@
             <p>&nbsp;</p>
         </section>
         <section>
-            <h2>Secondary Focus of <span style="text-transform: lowercase;"><span style="color: #bada55;">@</span>kalarrs</span></h2>
+            <h2>Secondary Focus of <span style="text-transform: lowercase;"><span style="color: #bada55;">@</span>kalarrs</span>
+            </h2>
             <hr>
             <ul>
                 <li class="fragment">Language agnostic</li>
@@ -111,7 +150,7 @@
                 <li class="fragment">Provider agnostic (Coming Soon)</li>
             </ul>
         </section>
-
+        -->
         <section>
             <!--https://medium.com/@nnilesh7756/what-are-cloud-computing-services-iaas-caas-paas-faas-saas-ac0f6022d36e-->
             <h2>5 main types of <br>cloud computing services</h2>
@@ -139,6 +178,13 @@
 
             </p>
             -->
+        </section>
+
+        <section>
+            <h2>Getting Started</h2>
+
+            <pre><code class="javascript">let x = 1;
+            </code></pre>
         </section>
     </div>
 </div>

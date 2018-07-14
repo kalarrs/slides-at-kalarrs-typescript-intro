@@ -1,0 +1,48 @@
+.reveal {
+
+  .clearfix {
+    overflow: hidden;
+    clear: both;
+  }
+  .sls {
+    background: #FD5750;
+    a {
+      color: #fff !important;
+    }
+  }
+
+  .boxes {
+    float: left;
+    width: 50%;
+    &:first-child {
+      margin-right: 20px;
+      width: calc(50% - 20px)
+    }
+
+    .outline {
+      padding-top: 15px;
+      border: .03em solid white;
+      h4 {
+        margin-bottom: 0;
+      }
+
+      &.pull-left {
+        padding: 0 20px;
+      }
+    }
+  }
+
+  .pull-left {
+    float: left;
+  }
+
+  .kalarrs {
+    //font-size: 1.1em;
+    text-transform: lowercase;
+    &:before {
+      color: #bada55;
+      content: '@'
+    }
+  }
+
+}

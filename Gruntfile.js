@@ -35,6 +35,10 @@ module.exports = function(grunt) {
 		},
 
 		sass: {
+            index: {
+                src: 'css/index.scss',
+                dest: 'css/index.css'
+            },
 			core: {
 				src: 'css/reveal.scss',
 				dest: 'css/reveal.css'
@@ -135,6 +139,10 @@ module.exports = function(grunt) {
 				files: [ 'css/reveal.scss' ],
 				tasks: 'css-core'
 			},
+            sass: {
+                files: [ 'css/index.scss' ],
+                tasks: 'css'
+            },
 			html: {
 				files: root.map(path => path + '/*.html')
 			},
