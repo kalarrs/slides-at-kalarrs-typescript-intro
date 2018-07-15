@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/black.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <!-- Theme used for syntax highlighting of code -->
     <link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,7 +25,7 @@
 <body>
 <div class="reveal">
     <div class="slides">
-
+<!--
         <section>
             <h1><span class="kalarrs">kalarrs</span></h1>
             <h3>The Complete Serverless Framework</h3>
@@ -87,6 +88,7 @@
             <h2>What is <span class="kalarrs">kalarrs</span></h2>
             <p>Set of tooling built on top of Serverless Framework, mainly as plugins. As well as a collection of
                 libraries to normalize development between languages.</p>
+            <small><a href="htttp://github.com/kalarrs">htttp://github.com/kalarrs</a></small>
 
             <div class="clearfix">
                 <div class="boxes fragment">
@@ -125,12 +127,29 @@
                     style="color: #bada55;">@</span>kalarrs</span></h2>
             <hr>
             <ul>
-                <li class="fragment">Api</li>
-                <li class="fragment">Schedule Jobs</li>
-                <li class="fragment">Pipelines</li>
+                <li class="fragment">
+                    <span>Api</span>
+                    <ul>
+                        <li>JSON</li>
+                        <li>XML</li>
+                        <li>Binary</li>
+                    </ul>
+                </li>
+                <li class="fragment">
+                    Schedule Jobs
+                    <ul>
+                        <li>Data Integrity</li>
+                        <li>Logging</li>
+                        <li>Sync</li>
+                    </ul>
+                </li>
+                <li class="fragment">
+                    Pipelines
+                    <ul>
+                        <li>ETL</li>
+                    </ul>
+                </li>
             </ul>
-            <p>&nbsp;</p>
-            <p>&nbsp;</p>
         </section>
         <section>
             <h2>Secondary Focus of <span style="text-transform: lowercase;"><span style="color: #bada55;">@</span>kalarrs</span>
@@ -186,12 +205,58 @@
             </div>
             <aside><a href="https://medium.com/@nnilesh7756/what-are-cloud-computing-services-iaas-caas-paas-faas-saas-ac0f6022d36e">Median Article</a></aside>
         </section>
-
         <section>
             <h2>Getting Started</h2>
-
-            <pre><code class="javascript">let x = 1;
-            </code></pre>
+            <p>Find this video on <a href="https://kalarrs.com">https://kalarrs.com</a></p>
+            <iframe allowFullScreen="allowFullScreen"
+                    src="https://www.youtube.com/embed/Dox6GQznpRI?ecver=1&amp;iv_load_policy=1&amp;rel=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red"
+                    allowtransparency="true" frameborder="0" width="400" height="225">
+            </iframe>
+            <div class="oses">
+                <div>
+                    <img src="/assets/images/OSX.jpg" alt="">
+                    <img src="/assets/images/windows.jpg" alt="">
+                    <img src="/assets/images/linux.png" style="background: #fff;" alt="">
+                </div>
+                <small style="margin-top: -25px;">Soon</small>
+            </div>
+        </section>
+        <section>
+            <h2>I've got <span class="kalarrs">kalarrs/cli</span> now what?</h2>
+            <p class="fragment">Time to create a Workspace.</p>
+        </section>
+        -->
+        <section>
+            <h2>What is a Workspace?</h2>
+            <p>Named after the Java equivalent a workspace is a folder that contains projects. In dotnet this is very similar to a solution.</p>
+            <div class="clearfix">
+                <div class="tree pull-left">
+                    <span class="folder workspace"><i class="material-icons">folder</i>Workspace</span>
+                    <div>
+                        <span class="folder"><i class="material-icons">folder</i>.env</span>
+                        <span class="file"><i class="material-icons">insert_drive_file</i>serverless.yml</span>
+                        <span class="file"><i class="material-icons">insert_drive_file</i>serverless-user.yml</span>
+                        <span class="folder project"><i class="material-icons">folder</i>Project</span>
+                        <span class="folder project"><i class="material-icons">folder</i>Project</span>
+                        <span class="folder project" style="margin-bottom: -20px"><i class="material-icons">folder</i>Project</span>
+                        ...
+                    </div>
+                </div>
+                <div class="fragment tree pull-left" style="margin-left: 40px;">
+                    <span class="folder project"><i class="material-icons">folder</i>Project</span>
+                    <div>
+                        <span class="folder dist"><i class="material-icons">folder</i>.serverless</span>
+                        <span class="folder dist"><i class="material-icons">folder</i>.webpack</span>
+                        <span class="folder docs"><i class="material-icons">folder</i>docs</span>
+                        <span class="folder src"><i class="material-icons">folder</i>src</span>
+                        <span class="folder"><i class="material-icons">folder</i>node_modules</span>
+                        <span class="folder test"><i class="material-icons">folder</i>test</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2>Creating your first workspace</h2>
         </section>
     </div>
 </div>

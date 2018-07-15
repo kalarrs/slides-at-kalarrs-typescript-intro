@@ -47,3 +47,57 @@
 
 .reveal table.t-4 tr:nth-child(1) {
   background: #42affa; }
+
+.reveal .oses img {
+  width: 100px;
+  height: 100px; }
+
+.reveal .folder, .reveal .file {
+  display: block; }
+  .reveal .folder i, .reveal .file i {
+    font-size: 1.3em;
+    top: 10px;
+    left: -3px;
+    position: relative; }
+  .reveal .folder.workspace i, .reveal .file.workspace i {
+    color: orange; }
+  .reveal .folder.project i, .reveal .file.project i {
+    color: mediumpurple; }
+  .reveal .folder.src i, .reveal .file.src i {
+    color: #b299e5; }
+  .reveal .folder.test i, .reveal .file.test i {
+    color: #3bb16f; }
+  .reveal .folder.docs i, .reveal .file.docs i {
+    color: lightskyblue; }
+
+.reveal .tree {
+  font-size: .8em;
+  text-align: left; }
+  .reveal .tree div {
+    padding-left: 20px; }
+    .reveal .tree div + div {
+      padding-left: 40px; }
+      .reveal .tree div + div + div {
+        padding-left: 60px; }
+
+.reveal .material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga'; }

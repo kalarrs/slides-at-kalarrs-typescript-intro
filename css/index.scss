@@ -77,4 +77,81 @@
     }
   }
 
+  .oses {
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+
+  .folder, .file {
+    display: block;
+
+    i {
+      font-size: 1.3em;
+      top: 10px;
+      left: -3px;
+      position: relative;
+    }
+
+    &.workspace i {
+      color: orange;
+    }
+
+    &.project i {
+      color: mediumpurple;
+    }
+
+    &.src i {
+      color: lighten(mediumpurple, 10%);
+    }
+
+    &.test i {
+      color: lighten(seagreen, 10%);
+    }
+
+    &.docs i {
+      color: lightskyblue;
+    }
+  }
+
+  .tree {
+    font-size: .8em;
+    text-align: left;
+    div {
+      padding-left: 20px;
+      + div {
+        padding-left: 40px;
+        + div {
+          padding-left: 60px;
+        }
+      }
+    }
+  }
+
+
+  .material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
 }
