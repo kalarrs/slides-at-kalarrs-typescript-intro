@@ -39,6 +39,10 @@
     float: left;
   }
 
+  .pull-right {
+    float: right;
+  }
+
   .kalarrs {
     font-size: 1.1em;
     text-transform: lowercase;
@@ -86,6 +90,12 @@
 
   .folder, .file {
     display: block;
+    position: relative;
+
+    .note {
+      margin-left: 50px;
+      font-size: .7em;
+    }
 
     i {
       font-size: 1.3em;
@@ -113,11 +123,20 @@
     &.docs i {
       color: lightskyblue;
     }
+
+    &.yarn i {
+      color: #117cad;
+    }
+
+    &.library i {
+      color: #efef8f;
+    }
   }
 
   .tree {
     font-size: .8em;
     text-align: left;
+
     div {
       padding-left: 20px;
       + div {

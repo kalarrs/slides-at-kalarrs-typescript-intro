@@ -26,6 +26,9 @@
 .reveal .pull-left {
   float: left; }
 
+.reveal .pull-right {
+  float: right; }
+
 .reveal .kalarrs {
   font-size: 1.1em;
   text-transform: lowercase; }
@@ -53,7 +56,11 @@
   height: 100px; }
 
 .reveal .folder, .reveal .file {
-  display: block; }
+  display: block;
+  position: relative; }
+  .reveal .folder .note, .reveal .file .note {
+    margin-left: 50px;
+    font-size: .7em; }
   .reveal .folder i, .reveal .file i {
     font-size: 1.3em;
     top: 10px;
@@ -69,6 +76,10 @@
     color: #3bb16f; }
   .reveal .folder.docs i, .reveal .file.docs i {
     color: lightskyblue; }
+  .reveal .folder.yarn i, .reveal .file.yarn i {
+    color: #117cad; }
+  .reveal .folder.library i, .reveal .file.library i {
+    color: #efef8f; }
 
 .reveal .tree {
   font-size: .8em;
