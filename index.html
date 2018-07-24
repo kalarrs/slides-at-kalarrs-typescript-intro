@@ -38,11 +38,15 @@
         </section>
         <section>
             <h2>This talk</h2>
-            <p>I'm going to take the next hour and educate you on how you or your company can reduce operating cost, delploy code faster, and enhance the choices for integrations by utilizing FAAS aka Serverless. I'm also going to talk about how the <span class="kalarrs">kalarrs</span> tooling makes this possible.</p>
-            <h3 class="fragment">After this talk</h3>
+            <p>I'm going to take the next hour and educate you on how you or your company can reduce operating cost,
+                deploy code faster, and enhance your integration choices by utilizing FAAS aka Serverless. I'm also
+                going to talk about how the <span class="kalarrs">kalarrs</span> tooling makes this process even easier.</p>
+        </section>
+        <section>
+            <h2>After this talk</h2>
             <ol>
-                <li class="fragment">Start migrating to FAAS</li>
-                <li class="fragment">Add FAAS to your current process</li>
+                <li class="fragment">Add FAAS with @kalarrs</li>
+                <li class="fragment">Add FAAS without @kalarrs, build your own</li>
                 <li class="fragment">Do nothing</li>
             </ol>
         </section>
@@ -98,7 +102,7 @@
             </aside>
         </section>
         <section>
-            <h2>History of software development</h2>
+            <h2>History of software developers responsibilities</h2>
             <ul>
                 <li class="fragment">15 years ago</li>
                 <li class="fragment">10 years ago</li>
@@ -109,14 +113,15 @@
             <aside class="notes">
                 15 - Talk about building and maintaining servers + apps + code + db
                 10 - Using paas + maintain apps in the cloud + code + db
-                    * easy to replicate
-                    * scaling - load balancers
+                * easy to replicate
+                * scaling - load balancers
                 5 - Talk about going to the cloud + apps + code
-                    * AWS, GCP, Azure
-                    * Easier to replicate
-                    * Lucky enough, use built in scaling
-                    * DB as a service
-                T - We want to be able to just pay for a system that allows us to just write code and will scale automatically.
+                * AWS, GCP, Azure
+                * Easier to replicate
+                * Lucky enough, use built in scaling
+                * DB as a service
+                T - We want to be able to just pay for a system that allows us to just write code and will scale
+                automatically.
             </aside>
         </section>
         <section>
@@ -180,7 +185,8 @@
         </section>
         <section>
             <h2>What is <span class="kalarrs">kalarrs</span></h2>
-            <p>Set of tooling built on top of <a href="https://serverless.com/framework">Serverless Framework</a>, mainly as plugins. As well as a collection of
+            <p>Set of tooling built on top of <a href="https://serverless.com/framework">Serverless Framework</a>,
+                mainly as plugins. As well as a collection of
                 libraries to normalize development between languages.</p>
             <small><a href="htttp://github.com/kalarrs">htttp://github.com/kalarrs</a></small>
 
@@ -285,7 +291,12 @@
         <section>
             <h2>What this looks like</h2>
             <p>Demo Time</p>
-            <!--TODO : Could have pictures of the api gateway, project etc and go down navigation-->
+            <ul>
+                <li class="fragment">Workspace (Typescript, C#)</li>
+                <li class="fragment">AWS API Gateway</li>
+                <!--<li class="fragment">AWS Cloud Watch Rules</li>-->
+                <!--<li class="fragment">AWS Lambda with triggers from s3 (pipeline)</li>-->
+            </ul>
         </section>
         <section>
             <h2>Getting Started</h2>
@@ -295,7 +306,9 @@
                     src="https://www.youtube.com/embed/Dox6GQznpRI?ecver=1&amp;iv_load_policy=1&amp;rel=0&amp;yt:stretch=16:9&amp;autohide=1&amp;color=red"
                     allowtransparency="true" frameborder="0" width="400" height="225">
             </iframe>
-            <p style="margin: 0;"><small>Find this video on <a href="https://kalarrs.com">https://kalarrs.com</a></small></p>
+            <p style="margin: 0;">
+                <small>Find this video on <a href="https://kalarrs.com">https://kalarrs.com</a></small>
+            </p>
             <div class="oses">
                 <div>
                     <img src="/assets/images/OSX.jpg" alt="">
@@ -347,16 +360,17 @@ $ kalarrs global sls
         </section>
         <section>
             <h2>init a workspace</h2>
+            <div class="fragment" data-fragment-index="1">
             <pre style="margin-top: -20px; margin-bottom: 0;"><code class="shell" data-trim contenteditable
                                                                     style="font-size: 18px;">
 $ kalarrs workspace init
 					</code></pre>
-
-            <div class="clearfix">
+            </div>
+            <div class="clearfix fragment" data-fragment-index="2">
                 <div class="tree">
                     <span class="folder workspace"><i class="material-icons">folder</i>Workspace</span>
                     <div>
-                        <any class="fragment" data-fragment-index="5">
+                        <any class="fragment" data-fragment-index="7">
                             <span class="folder"><i class="material-icons">folder</i>
                                 .env
                                 <span class="note">Directory for stage specific settings.</span>
@@ -368,25 +382,25 @@ $ kalarrs workspace init
                                 </span>
                             </div>
                         </any>
-                        <span class="folder fragment" data-fragment-index="1"><i
+                        <span class="folder fragment" data-fragment-index="3"><i
                                 class="material-icons">folder</i>.git</span>
-                        <span class="folder library fragment" data-fragment-index="3"><i
+                        <span class="folder library fragment" data-fragment-index="5"><i
                                 class="material-icons">folder</i>node_modules</span>
-                        <span class="file fragment" data-fragment-index="1"><i
+                        <span class="file fragment" data-fragment-index="3"><i
                                 class="material-icons">insert_drive_file</i>.gitignore</span>
-                        <span class="file fragment" data-fragment-index="2"><i
+                        <span class="file fragment" data-fragment-index="4"><i
                                 class="material-icons">insert_drive_file</i>package.json</span>
-                        <span class="file fragment" data-fragment-index="6"><i
+                        <span class="file fragment" data-fragment-index="8"><i
                                 class="material-icons">insert_drive_file</i>
                             serverless.yml
                             <span class="note">Global settings. References Stage specific files automatically.</span>
                         </span>
-                        <span class="file fragment" data-fragment-index="4"><i
+                        <span class="file fragment" data-fragment-index="6"><i
                                 class="material-icons">insert_drive_file</i>
                             serverless-user.yml
                             <span class="note">User specific settings.</span>
                         </span>
-                        <span class="file yarn fragment" data-fragment-index="3"><i class="material-icons">insert_drive_file</i>yarn.lock</span>
+                        <span class="file yarn fragment" data-fragment-index="5"><i class="material-icons">insert_drive_file</i>yarn.lock</span>
                     </div>
                 </div>
             </div>
@@ -419,7 +433,13 @@ $ kalarrs workspace init
                 <li>Create from scratch</li>
             </ol>
         </section>
-
+        <section>
+            <h2>Create a typescript api with mongo</h2>
+            <pre class="fragment" style="margin-top: -20px; margin-bottom: 0;"><code class="shell" data-trim contenteditable style="font-size: 18px;">
+$ serverless create --template-url https://github.com/kalarrs/\
+serverless-template-typescript/tree/master/aws/mongo --path users
+            </code></pre>
+        </section>
     </div>
 </div>
 
