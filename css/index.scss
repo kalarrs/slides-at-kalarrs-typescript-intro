@@ -1,5 +1,11 @@
 .reveal {
 
+  .icon {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+  }
+
   .clearfix {
     overflow: hidden;
     clear: both;
@@ -44,6 +50,11 @@
   }
 
   .kalarrs {
+    img {
+      border: none;
+      background: transparent;
+    }
+
     font-size: 1.1em;
     text-transform: lowercase;
     &:before {
@@ -130,6 +141,10 @@
 
     &.library i {
       color: #efef8f;
+    }
+
+    &.gray i {
+      color: #666;
     }
   }
 

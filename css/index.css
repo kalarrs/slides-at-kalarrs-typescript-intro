@@ -1,3 +1,8 @@
+.reveal .icon {
+  border: none;
+  background: transparent;
+  box-shadow: none; }
+
 .reveal .clearfix {
   overflow: hidden;
   clear: both; }
@@ -32,6 +37,9 @@
 .reveal .kalarrs {
   font-size: 1.1em;
   text-transform: lowercase; }
+  .reveal .kalarrs img {
+    border: none;
+    background: transparent; }
   .reveal .kalarrs:before {
     color: #bada55;
     content: '@'; }
@@ -80,6 +88,8 @@
     color: #117cad; }
   .reveal .folder.library i, .reveal .file.library i {
     color: #efef8f; }
+  .reveal .folder.gray i, .reveal .file.gray i {
+    color: #666; }
 
 .reveal .tree {
   font-size: .8em;
